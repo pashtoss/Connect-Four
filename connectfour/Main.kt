@@ -3,11 +3,7 @@ package connectfour
 const val MIN_SIZE = 5
 const val MAX_SIZE = 9
 
-fun isStringDigit(str: String): Boolean {
-    if (str == "") return false
-    for (ch in str) if (!ch.isDigit()) return false
-    return true
-}
+fun isStringDigit(str: String): = if (str.toIntOrNull() != null) true else false
 
 fun correctNumberOfGames(): Int {
     while (true) {
@@ -26,7 +22,6 @@ fun correctNumberOfGames(): Int {
 }
 
 fun correctDimension(): MutableList<Int> {
-
     while (true) {
         println("Set the board dimensions (Rows x Columns)")
         println("Press Enter for default (6 x 7)")
